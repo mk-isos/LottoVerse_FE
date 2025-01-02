@@ -22,6 +22,7 @@ const Number = styled('div')(({ theme }) => ({
   margin: theme.spacing(0, 1),
   fontWeight: 'bold',
   fontSize: '1.2rem',
+  backgroundColor: '#FFD700',
 }));
 
 const Powerball = styled(Number)(({ theme }) => ({
@@ -32,6 +33,7 @@ const Powerball = styled(Number)(({ theme }) => ({
 const Home: React.FC = () => {
   return (
     <div>
+      {/* Today's Powerball Section */}
       <Section>
         <Typography variant="h4" gutterBottom>
           Today's Powerball
@@ -41,9 +43,7 @@ const Home: React.FC = () => {
         </Typography>
         <Numbers>
           {[3, 15, 27, 35, 44].map((number, index) => (
-            <Number key={index} style={{ backgroundColor: '#FFD700' }}>
-              {number}
-            </Number>
+            <Number key={index}>{number}</Number>
           ))}
           <Powerball>9</Powerball>
         </Numbers>
@@ -51,6 +51,26 @@ const Home: React.FC = () => {
           Jackpot: $350 Million
         </Typography>
         <Typography variant="body1">Next Draw: January 5, 2025</Typography>
+      </Section>
+
+      {/* Mega Millions Section */}
+      <Section>
+        <Typography variant="h4" gutterBottom>
+          Mega Millions
+        </Typography>
+        <Typography variant="subtitle1" gutterBottom>
+          Last Draw: December 31, 2024
+        </Typography>
+        <Numbers>
+          {[7, 19, 23, 38, 42].map((number, index) => (
+            <Number key={index}>{number}</Number>
+          ))}
+          <Powerball>11</Powerball>
+        </Numbers>
+        <Typography variant="h6" gutterBottom>
+          Jackpot: $275 Million
+        </Typography>
+        <Typography variant="body1">Next Draw: January 3, 2025</Typography>
       </Section>
 
       <div style={{ textAlign: 'center' }}>
