@@ -2,7 +2,7 @@
 
 **LottoVerse** is a modern web application built with **React** that allows users to view the latest lottery results for **Powerball** and **Mega Millions**. It provides an elegant and user-friendly interface to check current and past winning numbers and jackpots.
 
-![LottoVerse Screenshot](./screenshot.png)
+![LottoVerse Screenshot](./LottoVerse.png)
 
 ## 📢 Project Description
 
